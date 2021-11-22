@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+    	setInterval(function(){ 
+		alert("Please, use me...");
+}, 30000);
+		function calculator()
+		{
+			var operator = document.getElementById("operators").value;
+			var value1 = document.getElementById("text_L").value;
+			var value2 = document.getElementById("text_R").value;
+			var res;
+
+			if (value1 != "" && value2 != "")
+			{
+				if (value1 < 0 || value2 < 0)
+					alert("Error :(");
+				else
+				{
+					if (operator == "plus")
+						res = parseFloat(value1)+parseFloat(value2);
+					if (operator == "minus")
+						res = parseFloat(value1)-parseFloat(value2);
+					if (operator == "multi")
+						res = parseFloat(value1)*parseFloat(value2); 
+					if (operator == "divi")
+					{
+						if (value2 != 0)
+							res = parseFloat(value1)/parseFloat(value2);
+						else
+						{
+							console.log("It’s over 9000!");
+							alert("It’s over 9000!");
+						}
+					}
+					if (operator == "persent")
+					{
+						if (value2 != 0)
+							res = parseFloat(value1)%parseFloat(value2);
+						else
+						{
+							console.log("It’s over 9000!");
+							alert("It’s over 9000!");
+						}
+					}
+					if (!isNaN(res))
+					{
+						console.log(res);
+						alert(res);
+					}
+					}
+				}
+			}
+
+		</script>
+	<style type="text/css">
+		#calcu{
+			height: 100px;
+			width: 100px;
+			display: flex;
+			font-size: 100px;
+		}
+	</style>
+	</head>
+	<body>
+	<div id="calcu">
+			<input type="text" id="text_L" name="texttext" pattern="[0-9]" title="Only numbers">
+			<select name="operators" id="operators" form="carform">
+	  			<option value="plus">+</option>
+	  			<option value="minus">-</option>
+	  			<option value="multi">*</option>
+	  			<option value="divi">/</option>
+	  			<option value="persent">%</option>
+			</select>
+			<input type="text" id="text_R" name="texttext" pattern="[0-9]" title="Only numbers">
+			<input type="submit" id="submit" value="Try me!" onclick="calculator()">
+	</div>
+	</body>
+</html>

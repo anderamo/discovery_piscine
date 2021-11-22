@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="backgroound.css">
+		<script type="text/javascript">
+			function getRandomColor() {
+	  			var letters = '0123456789ABCDEF';
+	  			var color = '#';
+	  			for (var i = 0; i < 6; i++) {
+	  				color += letters[Math.floor(Math.random() * 16)];
+	 			}
+	  			return color;
+			}
+
+			function change_color() {
+	  			document.body.style.backgroundColor = getRandomColor();
+			}
+		</script>
+	</head>
+	<body>
+	<header>
+	</header>
+	<section id="color">
+		<botton type="button" style="background-color: #FFFFFF;" onclick="change_color()">Click me!</botton>
+	</section>
+	<footer>
+	</footer>
+	</body>
+</html>

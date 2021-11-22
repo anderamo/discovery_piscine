@@ -1,0 +1,26 @@
+.menu {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fd/Bristol.zoo.western.lowland.gorilla.arp.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 1250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.menu1 {
+  background-image: url("https://static3.diariovasco.com/www/pre2017/multimedia/noticias/201507/26/media/mono--490x490.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 1250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

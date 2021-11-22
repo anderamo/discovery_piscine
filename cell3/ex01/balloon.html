@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+		<script type="text/javascript">
+			var reset = 200;
+			$(document).ready(function(){
+   				 $("#balloon").on('click', function(){
+   				 	var color = $("#balloon").css( "background-color" );
+   				 	if (color == "rgb(255, 0, 0)")
+   				 	{
+   				 		document.getElementById("balloon").style.backgroundColor = "green";
+   				 	}
+   				 	else if (color == "rgb(0, 128, 0)")
+   				 	{
+   				 		document.getElementById("balloon").style.backgroundColor = "blue";
+   				 	}
+   				 	else if (color == "rgb(0, 0, 255)")
+   				 	{	
+   				 		document.getElementById("balloon").style.backgroundColor = "red";
+   				 	}
+   				 	$("#balloon").height($("#balloon").height() + 10);
+   				 	$("#balloon").width($("#balloon").width() + 10); 
+   				 	if ($("#balloon").height() >= 420){
+   				 		$("#balloon").height(reset);
+   				 		$("#balloon").width(reset);
+   					 }
+       				 });
+   				 $("#balloon").mouseleave(function(){
+    				var color = $("#balloon").css( "background-color" );
+   				 	if (color == "rgb(255, 0, 0)")
+   				 	{
+   				 		document.getElementById("balloon").style.backgroundColor = "blue";
+   				 	}
+   				 	else if (color == "rgb(0, 128, 0)")
+   				 	{
+   				 		document.getElementById("balloon").style.backgroundColor = "red";
+   				 	}
+   				 	else if (color == "rgb(0, 0, 255)")
+   				 	{	
+   				 		document.getElementById("balloon").style.backgroundColor = "green";
+   				 	}
+   				 	$("#balloon").height($("#balloon").height() - 10);
+   				 	$("#balloon").width($("#balloon").width() - 10); 
+   				 	if ($("#balloon").height() <= 200){
+   				 		$("#balloon").height(reset);
+   				 		$("#balloon").width(reset);
+   					 }
+				});	 
+			});
+		</script>
+	<style type="text/css">
+		#balloon{
+			height: 200px;
+			width: 200px;
+			border: 1px solid black;
+			border-radius: 100%;
+			background-color: red;
+		}
+	</style>
+	</head>
+	<body>
+	<div id="balloon">
+	</div>
+	</body>
+</html>
